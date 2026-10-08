@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+  <Name>Yundera</Name>
+  <Overview>Yundera is a Docker-based self-hosting platform. We build tools that make deploying and managing applications simple.</Overview>
+  <GitHub>https://github.com/Yundera</GitHub>
+  <Support>https://github.com/Yundera/Maison/issues</Support>
+</Profile>

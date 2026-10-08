@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Maison</Name>
+  <Repository>ghcr.io/yundera/maison:latest</Repository>
+  <Registry>https://github.com/Yundera/Maison/pkgs/container/maison</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Yundera/Maison/issues</Support>
+  <Project>https://github.com/Yundera/Maison</Project>
+  <Overview>Maison is a lightweight self-hosted dashboard for managing Docker apps on a single host. It is a dashboard-only reimagining of CasaOS: same look, same feel, same app store — but stripped down to a home screen for your apps and a store to install more. Ships as one container: a Go binary with Svelte UI, no database required.</Overview>
+  <Category>Tools: HomeAutomation: Productivity:</Category>
+  <Description>Lightweight Docker app dashboard and store. One container, no database, CasaOS App Store compatible.</Description>
+  <TemplateURL>https://raw.githubusercontent.com/Yundera/maison-unraid-templates/main/maison.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Yundera/Maison/main/web/brand/icon.svg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI Port" Target="8080" Default="8080" Mode="tcp" Description="Maison dashboard web interface port" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Data Path" Target="/DATA" Default="/mnt/user/appdata/maison" Mode="rw" Description="Host path for app data. Apps installed by Maison bind their volumes here." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/maison</Config>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Docker socket for managing containers on the host" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="Host Proc" Target="/host/proc" Default="/proc" Mode="ro" Description="Host /proc mount for system resource monitoring" Type="Path" Display="advanced" Required="false" Mask="false">/proc</Config>
+  <Config Name="DATA_ROOT" Target="DATA_ROOT" Default="/DATA" Mode="" Description="Data folder path inside the container" Type="Variable" Display="advanced" Required="false" Mask="false">/DATA</Config>
+  <Config Name="DATA_HOST_PATH" Target="DATA_HOST_PATH" Default="/mnt/user/appdata/maison" Mode="" Description="Host path of the data folder. Must match the Data Path mount source." Type="Variable" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/maison</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="TZ" Target="TZ" Default="America/New_York" Mode="" Description="Timezone" Type="Variable" Display="always" Required="false" Mask="false">America/New_York</Config>
+</Container>
