@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <CommunityApplications>
   <Profile>
     Yundera builds Docker-based self-hosting tools. This repository contains Unraid templates for Maison, a lightweight Docker app dashboard and store.
